@@ -48,8 +48,8 @@ def processar_grafos_e_adicionar_conjuntos(pasta_grafos, arquivo_csv, pasta_said
             print(f'Salvo: {nome_arquivo_saida}')
 
 # Exemplo de uso
-pasta_grafos = 'instances'
-arquivo_csv = 'resultados_valores_otimos.csv'
-pasta_saida = 'dataframes_matriz'
+pasta_grafos = 'Instâncias Verificadas'
+arquivo_csv = 'Great values/great_values.csv'
+pasta_saida = 'Computational Representation Instances/dataframes_matriz_adjacencia'
 
 processar_grafos_e_adicionar_conjuntos(pasta_grafos, arquivo_csv, pasta_saida)
