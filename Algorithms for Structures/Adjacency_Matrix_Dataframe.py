@@ -37,19 +37,19 @@ def processar_grafos_e_adicionar_conjuntos(pasta_grafos, arquivo_csv, pasta_said
             
             # Procurando as informações de vértices selecionados no CSV
             vertices_selecionados_str = df_selecionados.loc[df_selecionados['Instância'] == nome_instancia, 'Vértices Selecionados'].values[0]
-            vertices_selecionados = list(map(int, vertices_selecionados_str.strip('[]').split(',')))
-            
+            vertices_selecionados = list(map(lambda x: int(x), vertices_selecionados_str.strip('[]').split(',')))
+
             # Garantindo que a indexação dos vértices esteja correta
             df_grafo['Conjuntos'] = [2 if i in vertices_selecionados else 1 for i in range(n_vertices)]
-            
+
             # Salvando o dataframe resultante em um arquivo CSV
             nome_arquivo_saida = os.path.join(pasta_saida, f'{nome_instancia}_matriz_adjacencia.csv')
             df_grafo.to_csv(nome_arquivo_saida, index=False)
             print(f'Salvo: {nome_arquivo_saida}')
 
 # Exemplo de uso
-pasta_grafos = 'Instâncias Verificadas'
-arquivo_csv = 'Great values/great_values.csv'
-pasta_saida = 'Computational Representation Instances/dataframes_matriz_adjacencia'
+pasta_grafos = 'New Instances Carlos/euclidianas'
+arquivo_csv = 'New Instances Carlos/great_values_euclidianas.csv'
+pasta_saida = 'New Instances Carlos/Euclidianas Matriz Adj'
 
 processar_grafos_e_adicionar_conjuntos(pasta_grafos, arquivo_csv, pasta_saida)

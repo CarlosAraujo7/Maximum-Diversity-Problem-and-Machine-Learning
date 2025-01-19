@@ -1,0 +1,1 @@
+teste em lista de adjacência com tamanho de treino de 200 instâncias e teste com o resto

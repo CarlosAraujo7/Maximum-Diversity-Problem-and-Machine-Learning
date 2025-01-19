@@ -1,0 +1,9 @@
+Teste feito usando 200 instâncias aleatórias para treino e 55 restantes para teste;
+
+Teste feito excluindo instâncias de 2000 e 3000 vértices;
+
+Modelos utilizados para esse teste: regressão logística, árvore de decisão, floresta randômica e KNN.
+
+Dataframes modelos no formato de matriz de adjacência + características;
+
+Treinamento feito com padronização de colunas, PCA e otimização de hiperparâmetros.
